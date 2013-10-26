@@ -1,0 +1,15 @@
+<h1>Goals</h1>
+
+
+
+      <section class="achievement-list">
+        <ul>
+        	<% @goals.each do |goal| %>
+	          <li>
+	          	<h3><%= goal.title %></h3>
+	            <h2><a href="goals/<%= goal.id %>"><%= goal.description %>- <time datetime=""> <%= goal.target_date %></time></a></h2>
+	            <a href="" class="see-all">See all for this position</a>
+	          </li>
+	        <% end  %> 
+        </ul>
+      </section>

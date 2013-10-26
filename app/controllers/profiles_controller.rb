@@ -1,4 +1,5 @@
 class ProfilesController < ApplicationController
+     layout 'application'
   # GET /profiles
   def index
     @profiles = Profile.all

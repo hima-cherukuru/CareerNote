@@ -8,7 +8,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="navbar navbar-inverse">
+<!-- begin page -->
+	<div class="container">
+	  <header>
+        <div class="header-content">
+          <h4>careergurl84 CareerNotes</h4>
+          <nav class="header-nav">
+            <ul>
+              <li><a href="">Main Page | </a></li>
+              <% if current_user %>
+              	<li><a href="/profiles/<%= current_user.id %>">Personal Settings</a></li>
+              <% else %>
+	        	<a href="/users/sign_up">Register</a>  |  <a href="/users/sign_in">Log In</a>	
+              <% end %>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      
+	<!-- <div class="navbar navbar-inverse">
 	    <div class="navbar-inner">
 	      <a class="brand" href="<%= root_path %>">CareerNotes</a>
 
@@ -16,30 +34,29 @@
 	      </ul>     
 
 	      <p class="navbar-text pull-right">
-
+ -->
 	<!-- if user is logged in, show logout, else show sign in if not logged -->
-	      <% if current_user %>
+<!-- 	      <% if current_user %>
 	        Welcome <a href="/users/<%= current_user.id %>"><%= current_user.id %> </a>  |  
-	        <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+	        <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %> -->
 	        <!-- 
 	        <a href="/users/sign_out">Logout</a> -->
-	      <% else %>
+	<!--       <% else %>
 	        New user? <a href="/users/sign_up">Register</a>  |  <a href="/users/sign_in">Log In</a>
-	      <% end %> 
+	      <% end %>  -->
 
 	        <!-- logged_in_user@email.com | <a href="log_out_link_here">Log Out</a> -->
 
-	      </p>
+<!-- 	      </p>
 
 	    </div>
-  </div>
-<!-- begin page -->
-	<div class="container">
+  </div> -->
 
 <!-- insert other details -->
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 <%= yield %>
-</div>
+
+    </div><!-- /.container -->
 </body>
 </html>

@@ -1,0 +1,154 @@
+/* achievements */
+.achievement-list,
+.challenges-list {
+	margin-top: 40px;
+	margin-left: 25px;
+}
+.achievement-list li,
+.challenges-list li {
+	list-style-type: none;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	position: relative;
+}
+
+.achievement-list h3,
+.challenges-list h3 {
+	font-size: 14px;
+	margin-top: 0;
+}
+.achievement-list h2,
+.challenges-list h2 {
+	font-size: 20px;
+	margin-top: 10px;
+}
+.achievement-list .see-all,
+.challenges-list .see-all {
+	position: absolute;
+	top: 20px;
+	right: 0;
+	font-size: 12px;
+	line-height: 18px;
+}
+.achievement-list .see-all:before,
+.challenges-list .see-all:before {
+	content: "+";
+	font-weight: bold;
+	background-color: #999;
+	border-radius: 9px;
+	color: #fff;
+	font-size: 16px;
+	padding: 0 5px 1px;
+	margin-right: 5px;
+	line-height: 16px;
+}
+
+/* create achievements */
+.create-achievements {
+	margin-left: 25px;
+}
+.create-achievements label {
+	display: block;
+	font-weight: normal;
+	margin: 20px 0 10px;
+}
+.create-achievements input {
+	display: block;
+	border: 1px solid #ccc;
+	width: 100%;
+}
+.create-achievements textarea {
+	border: 1px solid #ccc;
+	width: 100%
+}
+.create-achievements input.button {
+	width: auto;
+	margin-top: 50px;
+	float: right;
+	margin-right: 200px;
+}
+.create-achievements input.achievement-date {
+	width: 200px;
+}
+.add-teammate {
+	margin-top: 20px;
+}
+
+/* interview questions */
+.interview-questions {
+	margin-top: 40px;
+	margin-left: 25px;
+}
+.interview-questions li {
+	list-style-type: none;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 25px;
+	padding-top: 25px;
+	font-size: 16px;
+}
+.interview-question-type ul {
+	border-bottom: 1px solid #ccc;
+}
+.interview-question-type li {
+	display: inline-block;
+	border: 0;
+	padding-bottom: 5px;
+	margin-right: 40px;
+}
+.interview-question-type a,
+.interview-question-type a:link {
+	color: #666;
+	font-size: 12px;
+}
+
+/* login */
+.login {
+	margin-left: 120px;
+	margin-top: 50px;
+}
+.login label {
+	font-weight: normal;
+	display: block;
+	margin-top: 15px;
+}
+.login input {
+	display: block;
+	border: 1px solid #ccc;
+	width: 250px;
+}
+.login input.button {
+	width: auto;
+	margin-top: 35px;
+	margin-bottom: 10px;
+	padding: 2px 25px;
+}
+
+/* personal settings */
+.settings {
+	margin-left: 25px;
+}
+.settings dt {
+	margin-top: 30px;
+	font-weight: normal;
+}
+.settings dd {
+	margin-top: 5px;
+	font-size: 18px;
+}
+
+/* main page */
+.main-page {
+	margin-left: 25px;
+	margin-top: 70px;
+}
+.main-page li {
+	list-style-type: none;
+	padding: 25px 25px;
+	border-bottom: 1px solid #ccc;
+	line-height: 63px;
+}
+.main-page .create-new {
+	float: right;
+	font-size: 16px;
+}

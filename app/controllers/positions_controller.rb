@@ -1,4 +1,5 @@
 class PositionsController < ApplicationController
+    layout 'application'
   # GET /positions
   def index
     @positions = Position.all

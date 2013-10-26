@@ -3,11 +3,13 @@
   <%= @profile.first_name %> <%= @profile.last_name %> &apos;s Details %>
 <% end %>
 
-        <h1> Information regarding <%= @profile.first_name %> <%= @profile.last_name %> </h1>
+        <h2><%= @profile.first_name %> <%= @profile.last_name %>'s profile</h2>
 
         <p> <b>First Name: </b> <%= @profile.first_name %></p>
         <p> <b>Last Name:</b> <%= @profile.last_name %></p>
-        <p> <b>User Name:</b> <%= @profile.user_name %></p>
+        <p> <b>UserName:</b> <%= @profile.user_name %></p>
         <p> <b>LinkedIn Profile:</b> <%= @profile.linkedin %></p>
         <p> <a href='<%=@profile.id %>/edit'><button type='button' class='btn btn-warning inline'>Edit Profile Information</button></a></p>
         <div class='clear'></div>
+
+
