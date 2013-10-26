@@ -1,14 +1,36 @@
-<h2>Create a new achievement</h2>
+			<h1>Create New Achievement</h1>
+      
+      <section class="create-achievements">
 
+        <form>
+          <label for="achievement-title">Achievement title</label>
+          <input type="text" name="title" />
+          
+          <label for="job-title">Job Title</label>
+          <input type="text" name="job-title" />
+          
+          <label for="company">Company</label>
+          <input type="text" name="company" />
+          
+          <label for="achievement-date">Achievement Date</label>
+          <input type="text" name="achievement-date" class="achievement-date" />
+          
+          <label for="interview-question">Associated interview question? <a href="">Go to Interview Question List</a></label>
+          <input type="text" name="interview-question" />
+          
+          <label for="description">Description</label>
+          <textarea name="description"></textarea>
+          
+          <label for="participants">Who else participated?</label>
+          <textarea name="participants"></textarea>
+          
+          <p class="add-teammate"><a href="">Add a Teammate</a></p>
 
+          <p><a href="/achievements">Return to Achievements</a></p>
+          
+          <input type="button" name="fileit" value="File it" class="button"></button>
+        </form>
+</section>
 <!-- simple form sucks!  -->
-<%= simple_form_for @achievement do |f| %>
-	<%= f.input :title, label: 'Achievement Title' %>
-	<%= f.input :achievement_date, label: 'Achievement Date' %>
-	<%= f.association :position, :input_html => {:class => "fillmein"}, label: "Associated Job" %>
-	<%= f.input :description, :input_html => {:rows => 5, :class => "fillmein" } %>
-	<%= f.submit class: 'btn btn-primary' %>
-<!-- 	<%= f.button :submit %> -->
-<% end %>
-<p><a href="/achievements">Return to Achievements</a></p>
+
 
