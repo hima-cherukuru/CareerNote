@@ -21,7 +21,8 @@ class ProfilesController < ApplicationController
 
   # POST /profiles
   def create
-    @profile = Profile.new(params[:profile])
+    @profile = Profile.new(params[:profile].permit(:user_name,:first_name,:last_name,:linkedin))
+
     if @profile.save
       redirect_to @profile, notice: 'Profile was successfully created.'
     else
@@ -33,7 +34,7 @@ class ProfilesController < ApplicationController
   # PUT /profiles/1  
   def update
     @profile = Profile.find(params[:id])
-    if @profile.update_attributes(params[:profile])
+    if @profile.update_attributes(params[:profile].permit(:user_name,:first_name,:last_name,:linkedin))
       redirect_to @profile, notice: 'Profile was successfully updated.'
     else
       flash[:message] = "All fields must be filled to successfuly udpate this profile"

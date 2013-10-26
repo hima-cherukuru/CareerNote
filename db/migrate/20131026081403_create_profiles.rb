@@ -7,8 +7,9 @@ class CreateProfiles < ActiveRecord::Migration
       t.string :user_name
       t.datetime :last_login
       t.references :user, index: true
-
+      t.references :reminder
       t.timestamps
     end
+    add_index :reminder_id
   end
 end

@@ -5,33 +5,32 @@
 <title>CareerNotes</title>
 </head>
 
+<body>
+
 <header>
-	<h2>${Username}'s CareerNotes</h2>
-	<nav>
-		<ul>
-    	<li>Main Page</li>
- 			<li>Personal Settings</li>
+  <h2>${Username}'s CareerNotes</h2>
+  <nav>
+    <ul>
+      <li>Main Page</li>
+      <li>Personal Settings</li>
     </ul>
-	</nav>
+  </nav>
 </header>
 
 <h1>Personal Settings</h1>
-<%= simple_form_for @profile do |f| %>
-  <%= f.input :user_name, label: 'User name' %>
-  <%= f.input :first_name, label: 'First name' %>
-  <%= f.input :last_name, label: 'Last name' %>
-  <%= f.input :linkedin, label: 'LinkedIn URL'%>
-  <br><p>
-    <%= f.submit class: 'btn btn-primary' %>
-  </p>
-<!--  <%= f.button :submit %> -->
-<% end %>
-  
+<div class="row"> 
+  <%= simple_form_for @profile do |f| %>
+    <%= f.input :user_name, label: 'User name', :input_html => {:class => ".col-md-4"}%>
+    <%= f.input :first_name, label: 'First name' %>
+    <%= f.input :last_name, label: 'Last name' %>
+    <%= f.input :linkedin, label: 'LinkedIn URL'%>
+ <!--    f.association :reminder, label: 'Check-in Reminder Frequency', value: @profile.reminder_id %> -->
+    <br><p>
+      <%= f.submit class: 'btn btn-primary' %>
+    </p>
+  <!--  <%= f.button :submit %> -->
+  <% end %>
+</div> 
 <hr>
-  
-<dl>
-  <dt>Check-in Reminders</dt>
-  <dd>Monthly</dd>
-</dl>
-
+</body>
 </html>
