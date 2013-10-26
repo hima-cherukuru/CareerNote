@@ -1,1 +1,11 @@
+<!-- check if there is a current user/session logged in, if logged, show the user ID and name -->
+<% if current_user %>
+	<h5>Logged in as:  ID #<%= session[:user_id] %> 
+	<br>
+		Name: <%= current_user.name %>		
+	</h5>
+<% end %>
+
+
+
 Hi - I am the index page. test
