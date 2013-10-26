@@ -1,0 +1,12 @@
+<h2>New Kudos</h2>
+
+
+<!-- simple form sucks!  -->
+<%= simple_form_for @kudo do |f| %>
+	<%= f.input :user, label: 'From' %>
+	<br>
+	<%= f.input :content, :input_html => {:rows => 5, :class => "fillmein" } %>
+	<%= f.submit class: 'btn btn-primary' %>
+<!-- 	<%= f.button :submit %> -->
+<% end %>
+<p><a href="/kudo">Return to Kudos</a></p>

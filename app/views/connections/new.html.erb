@@ -1,0 +1,14 @@
+<h2>Enter a new connection</h2>
+
+
+<!-- simple form sucks!  -->
+<%= simple_form_for @connection do |f| %>
+	<%= f.input :first_name, label: 'First Name' %>
+	<%= f.input :last_name, label: 'Last Name' %>
+	<%= f.input :email, label: 'Email' %>
+	<%= f.input :job_title, label: 'Job Title' %>
+	<%= f.input :company, label: 'Company' %>
+	<%= f.submit class: 'btn btn-primary' %>
+<!-- 	<%= f.button :submit %> -->
+<% end %>
+

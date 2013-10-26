@@ -1,7 +1,7 @@
 class KudosController < ApplicationController
   # GET /kudos
   def index
-    @kudos = Kudo.all
+    @kudos = Kudo.where(user_id: current_user.id)
   end
 
   # GET /kudos/1
