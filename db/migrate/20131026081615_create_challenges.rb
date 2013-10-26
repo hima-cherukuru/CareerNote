@@ -4,6 +4,7 @@ class CreateChallenges < ActiveRecord::Migration
       t.text :context
       t.text :solution
       t.text :lesson
+      t.string :headline
       t.references :position, index: true
       t.references :user, index: true
 

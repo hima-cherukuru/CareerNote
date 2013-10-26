@@ -1,1 +1,25 @@
-achievements index
+
+<h1>Achievements</h1>
+<section>
+<a href="/achievements/new">New Achievement</a>
+	<ul>
+				<!-- show all  -->
+<% @achievements.each do |achievement| %>
+  	<li>
+  		achievement position holder
+  		<br>
+    	<a href ="achievements/<%= achievement.id %>"><%= achievement.title %> </a>
+      <time datetime=""><%= achievement.achievement_date %></time>
+	<a href="<%= achievement.id%>/edit">Edit</a>
+		<!-- delete button -->
+		<form action="<%= achievement.id %>" method="post">
+			<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+			<input type="submit" value="delete" class="btn btn-danger">
+			<input type="hidden" name="_method" value="delete">
+		</form>
+    </li>
+<% end %> 
+  </ul>
+</section>
+
+

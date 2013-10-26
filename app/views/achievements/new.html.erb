@@ -3,16 +3,13 @@
 
 <!-- simple form sucks!  -->
 <%= simple_form_for @achievement do |f| %>
-	<%= f.input :title, label: 'Achievement' %>
-	<%= f.input :title, label: 'Job Title' %>
-	<%= f.input :name, label: 'Company' %>
-
+	<%= f.input :title, label: 'Achievement Title' %>
+	<%= f.input :achievement_date, label: 'Achievement Date' %>
 	<%= f.association :position, :input_html => {:class => "fillmein"}, label: "Associated Job" %>
 	<%= f.input :description, :input_html => {:rows => 5, :class => "fillmein" } %>
-	<p>
-		<%= f.file_field :photo %>
-	</p>	
+
 	<%= f.submit class: 'btn btn-primary' %>
 <!-- 	<%= f.button :submit %> -->
 <% end %>
-<p><a href="/achievements">Return to Index</a></p>
+<p><a href="/achievements">Return to Achievements</a></p>
+

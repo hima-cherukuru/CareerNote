@@ -12,7 +12,7 @@ class AchievementsController < ActionController::Base
   end
 
 	def create
-		@achievement = Achievement.new(params[:achievement])
+		@achievement = Achievement.new(params[:achievement].permit(:title,:description,:achievement_date))
 		if @achievement.save
 			redirect_to @achievement, notice: "New achievement created"
 		else
@@ -31,7 +31,7 @@ class AchievementsController < ActionController::Base
 
 	def update
 		@achievement = Achievement.find(params[:id])
-		if @achievement.update_attributes(params[:achievement])
+		if @achievement.update_attributes(params[:achievement].permit(:title,:description,:achievement_date))
 		   flash[:notice] = "Successfully updated."
 			redirect_to @achievement
 		else 
