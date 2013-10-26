@@ -1,11 +1,13 @@
-<h2>Edit Interview question</h2>
+<h2><%= image_tag 'intervw-qs-49px.png' %></h2>
 
 
-<!-- simple form sucks!  -->
+<section class="create-achievements">
 <%= simple_form_for @interview do |f| %>
 	<%= f.input :question, label: 'Question' %>
 	<%= f.input :answer, :input_html => {:rows => 5, :class => "fillmein" } %>
-	<%= f.submit class: 'btn btn-primary' %>
+	<%= f.submit class: 'button' %>
 <!-- 	<%= f.button :submit %> -->
 <% end %>
-<p><a href="/interview">Return to Interview Questions</a></p>
+<p><a href="/interviews">Return to Interview Questions</a></p>
+
+</section>

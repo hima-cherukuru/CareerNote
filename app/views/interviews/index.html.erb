@@ -1,24 +1,26 @@
 
-<h1>Interview Questions</h1>
+<h1><%= image_tag 'intervw-qs-49px.png' %></h1>
 <section>
-<a href="/interviews/new">New Interview Question</a>
-	<br>
-	<ul>
-				<!-- show all  -->
-<% @interviews.each do |interview| %>
-  	<li>
-      	<a href="/interviews/<%= interview.id %>/edit"><%= interview.question %></a><br>
-      <!-- Answer: <%= interview.answer %> -->
-		<a href="/interviews/<%= interview.id%>/edit">Edit me!</a>
-		<!-- delete button -->
-		<form action="<%= interview.id %>" method="post">
-			<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-			<input type="submit" value="delete" class="btn btn-danger">
-			<input type="hidden" name="_method" value="delete">
-		</form>
-    </li>
-<% end %> 
-  </ul>
-</section>
 
+	<ul>      
+      <section class="interview-questions">
+       
+        <a href="/interviews/new" class="pull-right">New Interview Question</a> 
+        <nav class="interview-question-type">
+          <ul>
+            <li><a href="" class="active">Manager</a></li>
+            <li><a href="">Individual Contributor</a>
 
+    
+            </ul>
+        </nav>
+        
+        <ul class="interview-topics">
+        	<% @interviews.each do |interview| %>
+          <li>
+          	<a href="/interviews/<%= interview.id %>/edit"><%= interview.question %></a>
+          </li>
+        	<% end %>  
+        </ul>
+
+      </section>
