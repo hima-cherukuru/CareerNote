@@ -1,8 +1,14 @@
-				<!-- show all  -->
-<% @kudos.each do |kudo| %>
-<!-- 	Kudos from: <%= kudo.user_id %><br> -->
-	<%= kudo.content %>
-	<br>
-<% end %>	
+<h1><%= image_tag 'kudos-49px.png' %></h1>
+<section class="achievement-list">
+    <a href="/kudos/new"> <input type="button" name="fileit" value="Add new" class="button"></button></a>    
+    <ul>
+        <% @kudos.each do |kudo| %>
+          <li>
 
-
+            <h2>
+                <a href="/kudos/<%= kudo.id %>"><%= kudo.content %>     </a>
+            </h2>
+          </li>
+        <% end  %> 
+    </ul>
+</section>

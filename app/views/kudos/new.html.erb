@@ -1,12 +1,10 @@
-<h2>New Kudos</h2>
-
-
-<!-- simple form sucks!  -->
+<h1><%= image_tag 'kudos-49px.png' %></h1>
+<h2>New Kudo</h2>
+<section class="create-achievements">
 <%= simple_form_for @kudo do |f| %>
-	<%= f.input :user, label: 'From' %>
-	<br>
-	<%= f.input :content, :input_html => {:rows => 5, :class => "fillmein" } %>
-	<%= f.submit class: 'btn btn-primary' %>
-<!-- 	<%= f.button :submit %> -->
+    <%= f.input :content, label: 'Kudo Text' %>
+    <p><strong>Kudo Author</strong> Albert Lee</p>
+    <%= f.submit class: 'button' %>
 <% end %>
-<p><a href="/kudo">Return to Kudos</a></p>
+<p><a href="/kudos">Return to Kudos</a></p>
+</section>

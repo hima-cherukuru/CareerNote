@@ -6,7 +6,11 @@
 	          <li>
 
 	            <h2><a href="/goals/<%= goal.id %>"><%= goal.title %> 	</a>
-	            	<time datetime=""> <small class="pull-right"><%= goal.target_date %></small></time>
+	            	<%if goal.completed %>
+						<%= image_tag 'checkmark.png', :class =>'pull-right' %>
+	            	<% else %>	
+	            		<time datetime=""> <small class="pull-right">Due by <%= goal.target_date %></small></time>
+	            	<% end %>	
 	            </h2>
 	          </li>
 	        <% end  %> 

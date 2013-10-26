@@ -1,13 +1,18 @@
-<h1>Goals</h1>
+<h1><%= image_tag 'goals-49px.png' %></h1>
+
+<section class="achievement-list">
 <h2><%= @goal.title %></h2>
-<p><%= @goal.description %></p>
-<time><%= @goal.target_date %></time>
-
-
+<time style="margin-bottom: 50px;"><strong>Target date:</strong> <%= @goal.target_date %></time>
+<br>
+<br>
+<p style="margin-bottom: 30px;"><%= @goal.description %></p>
 <%= simple_form_for @goal do |f| %>
 	<%= f.input :completed, as: :boolean %>
 <!-- 	<%= f.submit class: 'btn btn-primary' %> -->
 
 <% end %>
 
+<div class="margin-top: 50px;">
 <a href="/goals/<%= @goal.id %>/edit">Edit</a> | <a href="/goals/">Return to goals</a>
+</div>
+</section>

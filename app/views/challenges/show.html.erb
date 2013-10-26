@@ -1,5 +1,6 @@
-<h2><a href="/challenges/"><%= image_tag 'challenge-49px.png' %></a></h2>
+<h1><a href="/challenges/"><%= image_tag 'challenge-49px.png' %></a></h1>
 
+<section class="challenges">
 <h3><%= @challenge.headline %></h3>
 <h6><a href="/challenges/<%= @challenge.id %>/edit">Edit</a>  |  
 <a href="/challenges/">Back</a></h6>
@@ -10,5 +11,6 @@
 <br>
 <p> <strong>Lessons Learned:</strong> <br><%= @challenge.lesson %></p>
 
+</section>
 <!-- <p><strong>Teammates</strong></p>
 Sandra Huang, Albert Madison, Sam Thomas -->

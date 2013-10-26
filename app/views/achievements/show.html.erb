@@ -1,4 +1,6 @@
-<h2><%= image_tag 'achieve-49px.png' %></h2>
+<a href="/achievements"><h1><%= image_tag 'achieve-49px.png' %></h1></a>
+
+<section class="achievement-list">
 <h3><%= @achievement.title %></h3>
 <h6><a href="/achievements/<%= @achievement.id %>/edit">Edit</a>  |  
 <a href="/achievements/">Back</a></h6>
@@ -9,3 +11,4 @@
 
 <p><strong>Teammates</strong></p>
 Sandra Huang, Albert Madison, Sam Thomas
+</section>
