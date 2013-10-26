@@ -21,7 +21,7 @@ class InterviewsController < ApplicationController
 
   # POST /interviews
   def create
-    @interview = Interview.new(params[:interview])
+    @interview = Interview.new(params[:interview].permit(:question,:answer))
     if @interview.save
       redirect_to @interview, notice: 'Interview was successfully created.'
     else
@@ -33,7 +33,7 @@ class InterviewsController < ApplicationController
   # PUT /interviews/1  
   def update
     @interview = Interview.find(params[:id])
-    if @interview.update_attributes(params[:interview])
+    if @interview.update_attributes(params[:interview].permit(:question,:answer))
       redirect_to @interview, notice: 'Interview was successfully updated.'
     else
       flash[:message] = "All fields must be filled to successfuly udpate this interview"

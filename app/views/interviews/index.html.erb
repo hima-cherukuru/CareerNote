@@ -1,0 +1,24 @@
+
+<h1>Interview Questions</h1>
+<section>
+<a href="/interviews/new">New Interview Question</a>
+	<br>
+	<ul>
+				<!-- show all  -->
+<% @interviews.each do |interview| %>
+  	<li>
+      	<a href="/interviews/<%= interview.id %>/edit"><%= interview.question %></a><br>
+      <!-- Answer: <%= interview.answer %> -->
+		<a href="/interviews/<%= interview.id%>/edit">Edit me!</a>
+		<!-- delete button -->
+		<form action="<%= interview.id %>" method="post">
+			<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+			<input type="submit" value="delete" class="btn btn-danger">
+			<input type="hidden" name="_method" value="delete">
+		</form>
+    </li>
+<% end %> 
+  </ul>
+</section>
+
+

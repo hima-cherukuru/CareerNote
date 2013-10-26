@@ -21,24 +21,24 @@ class CategoriesController < ApplicationController
 
   # POST /categories
   def create
-    @category = Category.new(params[:category])
-    if @category.save
-      redirect_to @category, notice: 'Category was successfully created.'
-    else
-      flash[:message] = "All fields must be filled to list a new category"
-      render action: 'new'
-    end
+    # @category = Category.new(params[:category])
+    # if @category.save
+    #   redirect_to @category, notice: 'Category was successfully created.'
+    # else
+    #   flash[:message] = "All fields must be filled to list a new category"
+    #   render action: 'new'
+    # end
   end
 
   # PUT /categories/1  
   def update
-    @category = Category.find(params[:id])
-    if @category.update_attributes(params[:category])
-      redirect_to @category, notice: 'Category was successfully updated.'
-    else
-      flash[:message] = "All fields must be filled to successfuly udpate this category"
-      render action: "edit"
-    end
+    # @category = Category.find(params[:id])
+    # if @category.update_attributes(params[:category])
+    #   redirect_to @category, notice: 'Category was successfully updated.'
+    # else
+    #   flash[:message] = "All fields must be filled to successfuly udpate this category"
+    #   render action: "edit"
+    # end
   end
 
   # DELETE /categories/1

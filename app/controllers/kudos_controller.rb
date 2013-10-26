@@ -21,7 +21,7 @@ class KudosController < ApplicationController
 
   # POST /kudos
   def create
-    @kudo = Kudo.new(params[:kudo])
+    @kudo = Kudo.new(params[:kudo].permit(:content,:connection_id))
     if @kudo.save
       redirect_to @kudo, notice: 'Kudo was successfully created.'
     else
@@ -33,7 +33,7 @@ class KudosController < ApplicationController
   # PUT /kudos/1  
   def update
     @kudo = Kudo.find(params[:id])
-    if @kudo.update_attributes(params[:kudo])
+    if @kudo.update_attributes(params[:kudo].permit(:content,:connection_id))
       redirect_to @kudo, notice: 'Kudo was successfully updated.'
     else
       flash[:message] = "All fields must be filled to successfuly udpate this kudo"

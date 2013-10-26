@@ -1,7 +1,8 @@
 <h1>Challenges</h1>
 <div class="row"> 
   <%= simple_form_for @challenge do |f| %>
-    <%= f.input :headline, label: 'Challenge Headline', :input_html => {:class => ".col-md-4"}%>
+    <%= f.input :headline, label: 'Challenge Headline', :input_html => {:class => 
+      ".col-md-4"}%>
     <%= f.input :context, label: 'Context of the Challenge', :input_html => {:class => ".col-md-4"}%>
     <%= f.input :solution, label: 'How I Solved the Challenge' %>
     <%= f.input :lesson, label: 'Lessons Learned from this experience' %>

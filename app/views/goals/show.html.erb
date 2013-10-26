@@ -1,0 +1,19 @@
+<h2>Goals</h2>
+<h4><%= @goal.title %></h4>
+<p><%= @goal.description %></p>
+<h4><%= @goal.target_date %></h4>
+<br>
+<% if @goal.completed %>
+	completed
+<% else %>
+	Not completed yet	
+<% end %>	
+
+
+<%= simple_form_for @goal do |f| %>
+	<%= f.input :completed, as: :boolean %>
+	<%= f.submit class: 'btn btn-primary' %>
+
+<% end %>
+
+<a href="/goals/<%= @goal.id %>/edit">Edit</a>

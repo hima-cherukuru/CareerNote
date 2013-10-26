@@ -21,7 +21,7 @@ class PositionsController < ApplicationController
 
   # POST /positions
   def create
-    @position = Position.new(params[:position])
+    @position = Position.new(params[:position].permit(:job_title,:company,:start_date,:end_date, :current))
     if @position.save
       redirect_to @position, notice: 'Position was successfully created.'
     else
@@ -33,7 +33,7 @@ class PositionsController < ApplicationController
   # PUT /positions/1  
   def update
     @position = Position.find(params[:id])
-    if @position.update_attributes(params[:position])
+    if @position.update_attributes(params[:position].permit(:job_title,:company,:start_date,:end_date, :current))
       redirect_to @position, notice: 'Position was successfully updated.'
     else
       flash[:message] = "All fields must be filled to successfuly udpate this position"

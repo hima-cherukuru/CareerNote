@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20131026095706) do
     t.text     "context"
     t.text     "solution"
     t.text     "lesson"
+    t.string   "headline"
     t.integer  "position_id"
     t.integer  "user_id"
     t.datetime "created_at"
@@ -116,6 +117,7 @@ ActiveRecord::Schema.define(version: 20131026095706) do
     t.string   "user_name"
     t.datetime "last_login"
     t.integer  "user_id"
+    t.integer  "reminder_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -124,12 +126,9 @@ ActiveRecord::Schema.define(version: 20131026095706) do
 
   create_table "reminders", force: true do |t|
     t.string   "frequency"
-    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "reminders", ["user_id"], name: "index_reminders_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

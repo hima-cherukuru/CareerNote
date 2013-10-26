@@ -21,7 +21,7 @@ class ConnectionsController < ApplicationController
 
   # POST /connections
   def create
-    @connection = Connection.new(params[:connection])
+    @connection = Connection.new(params[:connection].permit(:title, :description, :target_date, :completed))
     if @connection.save
       redirect_to @connection, notice: 'Connection was successfully created.'
     else
@@ -33,7 +33,7 @@ class ConnectionsController < ApplicationController
   # PUT /connections/1  
   def update
     @connection = Connection.find(params[:id])
-    if @connection.update_attributes(params[:connection])
+    if @connection.update_attributes(params[:connection].permit(:title, :description, :target_date, :completed))
       redirect_to @connection, notice: 'Connection was successfully updated.'
     else
       flash[:message] = "All fields must be filled to successfuly udpate this connection"

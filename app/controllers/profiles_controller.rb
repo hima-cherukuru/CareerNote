@@ -22,7 +22,6 @@ class ProfilesController < ApplicationController
   # POST /profiles
   def create
     @profile = Profile.new(params[:profile].permit(:user_name,:first_name,:last_name,:linkedin))
-
     if @profile.save
       redirect_to @profile, notice: 'Profile was successfully created.'
     else

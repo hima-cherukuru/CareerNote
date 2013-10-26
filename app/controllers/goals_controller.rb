@@ -21,7 +21,7 @@ class GoalsController < ApplicationController
 
   # POST /goals
   def create
-    @goal = Goal.new(params[:goal])
+    @goal = Goal.new(params[:goal].permit(:title, :description, :target_date, :completed))
     if @goal.save
       redirect_to @goal, notice: 'Goal was successfully created.'
     else
@@ -33,7 +33,7 @@ class GoalsController < ApplicationController
   # PUT /goals/1  
   def update
     @goal = Goal.find(params[:id])
-    if @goal.update_attributes(params[:goal])
+    if @goal.update_attributes(params[:goal].permit(:title, :description, :target_date, :completed))
       redirect_to @goal, notice: 'Goal was successfully updated.'
     else
       flash[:message] = "All fields must be filled to successfuly udpate this goal"

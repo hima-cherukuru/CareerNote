@@ -10,6 +10,5 @@ class CreateProfiles < ActiveRecord::Migration
       t.references :reminder
       t.timestamps
     end
-    add_index :reminder_id
   end
 end

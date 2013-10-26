@@ -21,7 +21,7 @@ class ChallengesController < ApplicationController
 
   # POST /challenges
   def create
-    @challenge = Challenge.new(params[:challenge])
+    @challenge = Challenge.new(params[:challenge].permit(:headline, :context, :solution, :lesson, :position_id, :interview_id))
     if @challenge.save
       redirect_to @challenge, notice: 'Challenge was successfully created.'
     else
@@ -33,7 +33,7 @@ class ChallengesController < ApplicationController
   # PUT /challenges/1  
   def update
     @challenge = Challenge.find(params[:id])
-    if @challenge.update_attributes(params[:challenge])
+    if @challenge.update_attributes(params[:challenge].permit(:headline, :context, :solution, :lesson, :position_id, :interview_id))
       redirect_to @challenge, notice: 'Challenge was successfully updated.'
     else
       flash[:message] = "All fields must be filled to successfuly udpate this challenge"
