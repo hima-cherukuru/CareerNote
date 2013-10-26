@@ -1,0 +1,14 @@
+<h2><%= image_tag 'challenge-49px.png' %></h2>
+  <section class="challenges-list">
+    <a href="/challenges/new">Add Challenge</a>
+    <ul>
+    <!-- show all  -->
+    <% @challenges.each do |challenge| %>
+        <li>
+            <h3>Software Engineer - Google</h3>         
+            <h2><a href ="/challenges/<%= challenge.id %>"><%= challenge.headline %> </a></h2>
+            <a href="" class="see-all">See all for this position</a>         
+        </li>
+    <% end %> 
+  </ul>
+</section>

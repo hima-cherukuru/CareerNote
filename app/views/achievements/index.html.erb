@@ -1,5 +1,5 @@
-
-<h1><%= image_tag 'achieve-49px.png' %></h1>
+<h2><%= image_tag 'achieve-49px.png' %></h2>
+ 
   <section class="achievement-list">
   	<a href="/achievements/new">Add Achievement</a>
 	<ul>
@@ -9,19 +9,12 @@
 	    	<h3>Software Engineer - Google</h3>
 	    	<h2><a href ="/achievements/<%= achievement.id %>"><%= achievement.title %><time datetime=""><%= achievement.achievement_date %></time></a></h2>
             <a href="" class="see-all">See all for this position</a>
-<!-- 		<a href="<%= achievement.id%>/edit">Edit</a> -->
-			<!-- delete button -->
-<!-- 			<form action="<%= achievement.id %>" method="post">
-				<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-				<input type="submit" value="delete" class="btn btn-danger">
-				<input type="hidden" name="_method" value="delete">
-			</form> -->
+
 	    </li>
 	<% end %> 
   </ul>
 
 
 </section>
-
 
 

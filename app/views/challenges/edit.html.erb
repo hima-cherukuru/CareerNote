@@ -1,15 +1,18 @@
-<h1>Challenges</h1>
-<div class="row"> 
-  <%= simple_form_for @challenge do |f| %>
+<a href="/challenges/"><h2><%= image_tag 'challenge-49px.png' %></h2></a>
+
+
+<section class="create-achievements">  <%= simple_form_for @challenge do |f| %>
     <%= f.input :headline, label: 'Challenge Headline', :input_html => {:class => ".col-md-4"}%>
     <%= f.input :context, label: 'Context of the Challenge', :input_html => {:class => ".col-md-4"}%>
     <%= f.input :solution, label: 'How I Solved the Challenge' %>
     <%= f.input :lesson, label: 'Lessons Learned from this experience' %>
  <!--  Theroretically, we need to be able to tie this to the position_id and the interview_id, but save that for later -->
     <br><p>
-      <%= f.submit class: 'btn btn-primary' %>
+      <%= f.submit class: 'button' %>
     </p>
   <!--  <%= f.button :submit %> -->
   <% end %>
-</div> 
-<hr>
+
+  <p><a href="/challenges">Return to Challenges </a></p>
+
+</section>

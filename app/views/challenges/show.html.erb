@@ -1,8 +1,14 @@
-<h1> My Challenges</h1>
+<h2><a href="/challenges/"><%= image_tag 'challenge-49px.png' %></a></h2>
 
-<p> <b>Challenge Headline: </b> <%= @challenge.headline %></p>
-<p> <b>Context:</b> <%= @challenge.context %></p>
-<p> <b>My Approach and Solution:</b> <%= @challenge.solution %></p>
-<p> <b>Lessons Learned:</b> <%= @challenge.lesson %></p>
-<p> <a href='<%=@challenge.id %>/edit'><button type='button' class='btn btn-warning inline'>Edit Challenge Information</button></a></p>
-<div class='clear'></div>
+<h3><%= @challenge.headline %></h3>
+<h6><a href="/challenges/<%= @challenge.id %>/edit">Edit</a>  |  
+<a href="/challenges/">Back</a></h6>
+<br>
+<p> <strong>Context:</strong><br> <%= @challenge.context %></p>
+<br>
+<p> <strong>My Approach and Solution:</strong><br> <%= @challenge.solution %></p>
+<br>
+<p> <strong>Lessons Learned:</strong> <br><%= @challenge.lesson %></p>
+
+<!-- <p><strong>Teammates</strong></p>
+Sandra Huang, Albert Madison, Sam Thomas -->
