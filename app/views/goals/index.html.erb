@@ -1,15 +1,15 @@
-<h1>Goals</h1>
-
-
-
+<h1><%= image_tag 'goals-49px.png' %></h1>
       <section class="achievement-list">
+      <a href="/goals/new"> <input type="button" name="fileit" value="Add new" class="button"></button></a>    
         <ul>
         	<% @goals.each do |goal| %>
 	          <li>
-	          	<h3><%= goal.title %></h3>
-	            <h2><a href="goals/<%= goal.id %>"><%= goal.description %>- <time datetime=""> <%= goal.target_date %></time></a></h2>
-	            <a href="" class="see-all">See all for this position</a>
+
+	            <h2><a href="/goals/<%= goal.id %>"><%= goal.title %> 	</a>
+	            	<time datetime=""> <small class="pull-right"><%= goal.target_date %></small></time>
+	            </h2>
 	          </li>
 	        <% end  %> 
         </ul>
       </section>
+

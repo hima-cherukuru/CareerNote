@@ -1,34 +1,17 @@
-			<h1>Edit Achievement</h1>
+<h1><%= image_tag 'achieve-49px.png' %></h1>
       
       <section class="create-achievements">
 
-        <form>
-          <label for="achievement-title">Achievement title</label>
-          <input type="text" name="title" value="<%= @achievement.title %>"/>
-          
-          <label for="job-title">Job Title</label>
-          <input type="text" name="job-title" value="Software Engineer"/>
-          
-          <label for="company">Company</label>
-          <input type="text" name="company" value="Google"/>
-          
-          <label for="achievement-date">Achievement Date</label>
-          <input type="text" name="achievement-date" class="achievement-date"  value="<%= @achievement.achievement_date %>"/>
-          
-          <label for="interview-question">Associated interview question? <a href="">Go to Interview Question List</a></label>
-          <input type="text" name="interview-question" />
-          
-          <label for="description">Description</label>
-          <textarea name="description" value="<%= @achievement.description %>"></textarea>
-          
-          <label for="participants">Who else participated?</label>
-          <textarea name="participants"></textarea>
-          
-          <p class="add-teammate"><a href="">Add a Teammate</a></p>
+<!-- simple form sucks!  -->
+		<%= simple_form_for @achievement do |f| %>
+			<%= f.input :title, label: 'Achievement Title' %>
+			<%= f.input :achievement_date, label: 'Achievement Date' %>
+			<%= f.association :position, :input_html => {:class => "fillmein"}, label: "Associated Job" %>
+			<%= f.input :description, :input_html => {:rows => 5, :class => "fillmein" } %>
 
-          <p><a href="/achievements">Return to Achievements</a></p>
-          
-          <input type="button" name="fileit" value="File it" class="button"></button>
-        </form>
-</section>
+			<%= f.submit class: 'button' %>
+		<% end %>
 
+       </section>
+
+<a href="/achievements">Return to Achievements</a>

@@ -1,15 +1,14 @@
 <h2>Edit goal</h2>
+<section class="create-achievements">
 
 
 <!-- simple form sucks!  -->
 <%= simple_form_for @goal do |f| %>
 	<%= f.input :title, label: 'Goal Title' %>
 	<%= f.input :description, :input_html => {:rows => 5, :class => "fillmein" } %>
-	<br>
-	<%= f.input :target_date, label: 'Complete by Date' %>
-	<br>
-	<%= f.input :completed, as: :boolean %>
-	<%= f.submit class: 'btn btn-primary' %>
+	<%= f.input :target_date, label: 'Complete by Date', :input_html => {:class => 'achievement-date'} %>
+	<%= f.submit class: 'button' %>
 
 <% end %>
 <p><a href="/goals">Return to Goals</a></p>
+</section>
