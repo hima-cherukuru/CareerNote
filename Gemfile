@@ -22,6 +22,7 @@ gem 'hirb'
 # Login / Registration with Devise
 gem 'devise'
 
+gem 'simple_form'
 # Use SCSS for stylesheets
 # gem 'sass-rails', '~> 4.0.0'
 

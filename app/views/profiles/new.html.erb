@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CareerNotes</title>
+</head>
+
+<body>
+
+<header>
+	<h2>${Username}'s CareerNotes</h2>
+	<nav>
+		<ul>
+    	<li>Main Page</li>
+ 			<li>Personal Settings</li>
+    </ul>
+	</nav>
+</header>
+
+<h1>Personal Settings</h1>
+<div class="">
+  <%= simple_form_for @profile do |f| %>
+    <%= f.input :user_name, label: 'User name' %>
+    <%= f.input :first_name, label: 'First name' %>
+    <%= f.input :last_name, label: 'Last name' %>
+    <%= f.input :linkedin, label: 'LinkedIn URL'%>
+    <br><p>
+      <%= f.submit class: 'btn btn-primary' %>
+    </p>
+  <!--  <%= f.button :submit %> -->
+  <% end %>
+</div> 
+<hr>
+  
+<dl>
+  <dt>Check-in Reminders</dt>
+  <dd>Monthly</dd>
+</dl>
+
+</body>
+</html>

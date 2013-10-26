@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  frequency: MyString
+  user_id: 
+
+two:
+  frequency: MyString
+  user_id: 

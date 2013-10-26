@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  context: MyText
+  solution: MyText
+  lesson: MyText
+  position_id: 
+  user_id: 
+
+two:
+  context: MyText
+  solution: MyText
+  lesson: MyText
+  position_id: 
+  user_id: 

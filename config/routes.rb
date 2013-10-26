@@ -6,6 +6,17 @@ Careernotes::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'static#index'
+  resources :challenges
+  resources :achievements
+  resources :categories
+  resources :kudos
+  resources :positions
+  resources :goals
+  resources :profiles
+  resources :interviews
+  resources :connections
+
+  get 'static/test' => 'static#test'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

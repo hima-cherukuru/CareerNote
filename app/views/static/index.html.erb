@@ -1,11 +1,67 @@
 <!-- check if there is a current user/session logged in, if logged, show the user ID and name -->
+  <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <a class="brand" href="<%= root_path %>">CareerNotes</a>
+
+        <ul class="nav"> 
+        </ul>     
+
+        <p class="navbar-text pull-right">
+
+  <!-- if user is logged in, show logout, else show sign in if not logged -->
+        <% if current_user %>
+          Welcome <a href="/users/<%= current_user.id %>"><%= current_user.id %> </a>  |  
+          <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+          <!-- 
+          <a href="/users/sign_out">Logout</a> -->
+        <% else %>
+          New user? <a href="/users/sign_up">Register</a>  |  <a href="/users/sign_in">Log In</a>
+        <% end %> 
+
+          <!-- logged_in_user@email.com | <a href="log_out_link_here">Log Out</a> -->
+
+        </p>
+
+      </div>
+  </div>
+
+
 <% if current_user %>
-	<h5>Logged in as:  ID #<%= session[:user_id] %> 
-	<br>
-		Name: <%= current_user.name %>		
+	<h5>careergurl84's CareerNotes 	
 	</h5>
 <% end %>
 
 
+<header>
+	<h2>${Username}'s CareerNotes</h2>
+	<nav>
+		<ul>
+    	<li>Main Page</li>
+ 			<li>Personal Settings</li>
+    </ul>
+	</nav>
+</header>
 
-Hi - I am the index page. test
+<section>
+	<ul>
+  	<li>
+    	<a href="">Achievements</a>
+      <a href="">Create new</a>
+    </li>
+  	<li>
+    	<a href="">Challenges</a>
+      <a href="">Create new</a>
+    </li>
+  	<li>
+    	<a href="">Goals</a>
+      <a href="">Create new</a>
+    </li>
+  	<li>
+    	<a href="">Kudos</a>
+      <a href="">Create new</a>
+    </li>
+  	<li>
+    	<a href="">Interview Topics</a>
+    </li>
+  </ul>
+</section>
